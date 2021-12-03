@@ -39,9 +39,7 @@
 			        <workers>1</workers>
 			        <workerType>MICRO</workerType>
 			        <objectStoreV2>true</objectStoreV2>
-			        <deploymentTimeout>2100000</deploymentTimeout>
 			        <properties>
-			          <env>dev</env>
                       <anypoint.platform.client_id>5a0b3cf0273642bfa56ca16fa5a99f36</anypoint.platform.client_id>
                       <anypoint.platform.client_secret>0EfE786945dc41399D36ea4BFCa7a256</anypoint.platform.client_secret>
 			        </properties>
