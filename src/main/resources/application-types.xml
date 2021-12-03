@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="output" format="json">
+      <types:shape format="weave" example="examples/example-1.json"><![CDATA[%dw 2.0
+
+type output = Array<{|  cityName: String,   feelLike: Number {"typeId": "int"},   tempMin: Number {"typeId": "int"},   tempMax: Number {"typeId": "int"},   pressure: Number {"typeId": "int"}|}> {"example": "[{\\\"cityName\\\":\\\"Pune\\\",\\\"feelLike\\\":30,\\\"tempMin\\\":50,\\\"tempMax\\\":40,\\\"pressure\\\":1009},{\\\"cityName\\\":\\\"Nasik\\\",\\\"feelLike\\\":30,\\\"tempMin\\\":50,\\\"tempMax\\\":40,\\\"pressure\\\":1009}]"}
+
+]]></types:shape>
+    </types:type>
+    <types:type name="input" format="json">
+      <types:shape format="weave" example="examples/example2.json"><![CDATA[%dw 2.0
+
+type input = Array<{|  coord: {|    lon: Number {"typeId": "double"},     lat: Number {"typeId": "double"}  |},   weather: Array<{|    id: Number {"typeId": "int"},     main: String,     description: String,     icon: String  |}>, 
+  base: String, 
+  main: {|
+    temp: Number {"typeId": "double"}, 
+    feels_like: Number {"typeId": "double"}, 
+    temp_min: Number {"typeId": "double"}, 
+    temp_max: Number {"typeId": "double"}, 
+    pressure: Number {"typeId": "int"}, 
+    humidity: Number {"typeId": "int"}
+  |}, 
+  visibility: Number {"typeId": "int"}, 
+  wind: {|
+    speed: Number {"typeId": "double"}, 
+    deg: Number {"typeId": "int"}
+  |}, 
+  clouds: {| all: Number {"typeId": "int"} |}, 
+  dt: Number {"typeId": "int"}, 
+  sys: {|
+    "type": Number {"typeId": "int"}, 
+    id: Number {"typeId": "int"}, 
+    country: String, 
+    sunrise: Number {"typeId": "int"}, 
+    sunset: Number {"typeId": "int"}
+  |}, 
+  timezone: Number {"typeId": "int"}, 
+  id: Number {"typeId": "int"}, 
+  name: String, 
+  cod: Number {"typeId": "int"}
+|}> {"example": "[{\\\"coord\\\":{\\\"lon\\\":72.8479,\\\"lat\\\":19.0144},\\\"weather\\\":[{\\\"id\\\":701,\\\"main\\\":\\\"Mist\\\",\\\"description\\\":\\\"mist\\\",\\\"icon\\\":\\\"50n\\\"}],\\\"base\\\":\\\"stations\\\",\\\"main\\\":{\\\"temp\\\":298.14,\\\"feels_like\\\":299.15,\\\"temp_min\\\":297.09,\\\"temp_max\\\":298.14,\\\"pressure\\\":1009,\\\"humidity\\\":94},\\\"visibility\\\":2500,\\\"wind\\\":{\\\"speed\\\":2.57,\\\"deg\\\":20},\\\"clouds\\\":{\\\"all\\\":75},\\\"dt\\\":1638451223,\\\"sys\\\":{\\\"type\\\":1,\\\"id\\\":9052,\\\"country\\\":\\\"IN\\\",\\\"sunrise\\\":1638408378,\\\"sunset\\\":1638448204},\\\"timezone\\\":19800,\\\"id\\\":1275339,\\\"name\\\":\\\"Mumbai\\\",\\\"cod\\\":200},{\\\"coord\\\":{\\\"lon\\\":73.8553,\\\"lat\\\":18.5196},\\\"weather\\\":[{\\\"id\\\":804,\\\"main\\\":\\\"Clouds\\\",\\\"description\\\":\\\"overcast clouds\\\",\\\"icon\\\":\\\"04n\\\"}],\\\"base\\\":\\\"stations\\\",\\\"main\\\":{\\\"temp\\\":292.88,\\\"feels_like\\\":293.26,\\\"temp_min\\\":292.88,\\\"temp_max\\\":292.88,\\\"pressure\\\":1012,\\\"humidity\\\":90,\\\"sea_level\\\":1012,\\\"grnd_level\\\":950},\\\"visibility\\\":10000,\\\"wind\\\":{\\\"speed\\\":1.58,\\\"deg\\\":73,\\\"gust\\\":1.98},\\\"clouds\\\":{\\\"all\\\":100},\\\"dt\\\":1638451198,\\\"sys\\\":{\\\"country\\\":\\\"IN\\\",\\\"sunrise\\\":1638408083,\\\"sunset\\\":1638448015},\\\"timezone\\\":19800,\\\"id\\\":1259229,\\\"name\\\":\\\"Pune\\\",\\\"cod\\\":200}]"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#74c0f801-ea9c-431a-ace5-d0ab219b7594"/>
+</types:mule>
