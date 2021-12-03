@@ -1,0 +1,14 @@
+  [
+    {  "cityName": "Pune",
+    "feelLike": 30,
+    "tempMin": 50,
+    "tempMax": 40,
+    "pressure": 1009
+  },
+{  "cityName": "Nasik",
+    "feelLike": 30,
+    "tempMin": 50,
+    "tempMax": 40,
+    "pressure": 1009
+  }
+]

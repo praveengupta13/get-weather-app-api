@@ -1,0 +1,89 @@
+[
+    {
+        "coord": {
+            "lon": 72.8479,
+            "lat": 19.0144
+        },
+        "weather": [
+            {
+                "id": 701,
+                "main": "Mist",
+                "description": "mist",
+                "icon": "50n"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 298.14,
+            "feels_like": 299.15,
+            "temp_min": 297.09,
+            "temp_max": 298.14,
+            "pressure": 1009,
+            "humidity": 94
+        },
+        "visibility": 2500,
+        "wind": {
+            "speed": 2.57,
+            "deg": 20
+        },
+        "clouds": {
+            "all": 75
+        },
+        "dt": 1638451223,
+        "sys": {
+            "type": 1,
+            "id": 9052,
+            "country": "IN",
+            "sunrise": 1638408378,
+            "sunset": 1638448204
+        },
+        "timezone": 19800,
+        "id": 1275339,
+        "name": "Mumbai",
+        "cod": 200
+    },
+    {
+        "coord": {
+            "lon": 73.8553,
+            "lat": 18.5196
+        },
+        "weather": [
+            {
+                "id": 804,
+                "main": "Clouds",
+                "description": "overcast clouds",
+                "icon": "04n"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 292.88,
+            "feels_like": 293.26,
+            "temp_min": 292.88,
+            "temp_max": 292.88,
+            "pressure": 1012,
+            "humidity": 90,
+            "sea_level": 1012,
+            "grnd_level": 950
+        },
+        "visibility": 10000,
+        "wind": {
+            "speed": 1.58,
+            "deg": 73,
+            "gust": 1.98
+        },
+        "clouds": {
+            "all": 100
+        },
+        "dt": 1638451198,
+        "sys": {
+            "country": "IN",
+            "sunrise": 1638408083,
+            "sunset": 1638448015
+        },
+        "timezone": 19800,
+        "id": 1259229,
+        "name": "Pune",
+        "cod": 200
+    }
+]

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:validation="http://www.mulesoft.org/schema/mule/validation" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/validation http://www.mulesoft.org/schema/mule/validation/current/mule-validation.xsd">
+		<flow name="implementationFlow" doc:id="f902f49b-dee3-4d43-8cb6-d850ac053f4f" >
+		<http:listener doc:name="Listener" doc:id="314b1f0f-08ed-4514-896c-db840009af2b" path="/getWeather" config-ref="HTTP_Listener_config"/>
+		<set-variable value="#[attributes.queryParams.city2 as String]" doc:name="set City2" doc:id="a2028683-f20a-4629-b519-2a4998d1457e" variableName="city2"/>
+		<set-variable value="#[payload.city1 as String]" doc:name="Set City1" doc:id="aaf17b91-4db1-4cf6-8a2d-0f810b2b3b8b" variableName="city1"/>
+		<flow-ref doc:name="Flow Reference" doc:id="260d13d8-ccb7-4334-897d-c3683d1cb342" name="implementationFlow1"/>
+	</flow>
+	<flow name="implementationFlow1" doc:id="fe718f3f-e67d-4ab6-8c31-2605fc5f92e2" >
+		<scatter-gather doc:name="Scatter-Gather" doc:id="7248bf0e-f73d-4218-bb3e-105a7949cf99" >
+			<route>
+				<try doc:name="Try" doc:id="edfa48dc-01d5-4975-b24f-0612bcd35e2a" >
+					<http:request method="GET" doc:name="City1 Weather" doc:id="0c35d243-ad70-48e8-8d9a-03f3386a8719" config-ref="HTTP_Request_configuration" path="${request.path}">
+						<http:query-params ><![CDATA[#[output application/json
+---
+{
+	"appid": p('weatherapi.appid'),
+	"q" : vars.city1
+}]]]></http:query-params>
+					</http:request>
+				</try>
+			</route>
+			<route>
+				<try doc:name="Try" doc:id="256d6683-d5a1-46a4-9d07-7fec17590f08" >
+					<http:request method="GET" doc:name="Request" doc:id="6bf70a47-90d4-4f0a-9605-198f00215bc7" config-ref="HTTP_Request_configuration" path="${request.path}">
+						<http:query-params ><![CDATA[#[output application/json
+---
+{
+	"appid" : p('weatherapi.appid'),
+	"q" : vars.city2
+}]]]></http:query-params>
+					</http:request>
+				</try>
+			</route>
+		</scatter-gather>
+		<ee:transform doc:name="Transform Message" doc:id="74c0f801-ea9c-431a-ace5-d0ab219b7594" >
+			<ee:message >
+				<ee:set-payload resource="final.dwl" />
+			</ee:message>
+		</ee:transform>
+	</flow>
+</mule>
