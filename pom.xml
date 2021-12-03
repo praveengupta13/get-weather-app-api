@@ -34,15 +34,15 @@
                     <muleVersion>4.3.0</muleVersion>
 			        <username>naishagupta16072015</username>
 			        <password>Mulesoft@2021</password>
-			        <applicationName>weather-mule-app2</applicationName>
+			        <applicationName>weather-mule-app3</applicationName>
 			        <environment>Sandbox</environment>   
 			        <workers>1</workers>
 			        <workerType>MICRO</workerType>
 			        <objectStoreV2>true</objectStoreV2>
 			        <properties>
 			        <env>${env}</env>
-                      <anypoint.platform.client_id>930df5a4657e4f07a4fe1967d0485158</anypoint.platform.client_id>
-                      <anypoint.platform.client_secret>860f84d8A5fF4E058E46Be6A09C44f02</anypoint.platform.client_secret>
+                      <anypoint.platform.client_id>${client_id}</anypoint.platform.client_id>
+                      <anypoint.platform.client_secret>${client_secret}</anypoint.platform.client_secret>
 			        </properties>
                   </cloudHubDeployment>
                 </configuration>
