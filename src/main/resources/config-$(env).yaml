@@ -10,7 +10,7 @@ weatherapi:
  appid: "94a91ca29fe0e60a272f105e81f96777"
  
 deployment:
- muleVersion: 4.3.0
+ muleVersion: "4.3.0"
  username: "naishagupta16072015"
  password: "Mulesoft@2021"
  applicationName: "weather-mule-app"
