@@ -8,8 +8,8 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 http://www.mulesoft.org/schema/mule/validation http://www.mulesoft.org/schema/mule/validation/current/mule-validation.xsd">
 		<flow name="implementationFlow" doc:id="f902f49b-dee3-4d43-8cb6-d850ac053f4f" >
 		<http:listener doc:name="Listener" doc:id="314b1f0f-08ed-4514-896c-db840009af2b" path="/getWeather" config-ref="HTTP_Listener_config"/>
-		<set-variable value="#[attributes.queryParams.city2 as String]" doc:name="set City2" doc:id="a2028683-f20a-4629-b519-2a4998d1457e" variableName="city2"/>
-		<set-variable value="#[payload.city1 as String]" doc:name="Set City1" doc:id="aaf17b91-4db1-4cf6-8a2d-0f810b2b3b8b" variableName="city1"/>
+		<set-variable value="#[attributes.queryParams.city2 as String]" doc:name="set variable City2 from queryparameter" doc:id="a2028683-f20a-4629-b519-2a4998d1457e" variableName="city2"/>
+		<set-variable value="#[payload.city1 as String]" doc:name="Set variable City1 from payload" doc:id="aaf17b91-4db1-4cf6-8a2d-0f810b2b3b8b" variableName="city1"/>
 		<flow-ref doc:name="Flow Reference" doc:id="260d13d8-ccb7-4334-897d-c3683d1cb342" name="implementationFlow1"/>
 	</flow>
 	<flow name="implementationFlow1" doc:id="fe718f3f-e67d-4ab6-8c31-2605fc5f92e2" >
