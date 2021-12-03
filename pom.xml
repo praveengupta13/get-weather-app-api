@@ -40,8 +40,9 @@
 			        <workerType>MICRO</workerType>
 			        <objectStoreV2>true</objectStoreV2>
 			        <properties>
-                      <anypoint.platform.client_id>5a0b3cf0273642bfa56ca16fa5a99f36</anypoint.platform.client_id>
-                      <anypoint.platform.client_secret>0EfE786945dc41399D36ea4BFCa7a256</anypoint.platform.client_secret>
+			        <env>${env}</env>
+                      <anypoint.platform.client_id>930df5a4657e4f07a4fe1967d0485158</anypoint.platform.client_id>
+                      <anypoint.platform.client_secret>860f84d8A5fF4E058E46Be6A09C44f02</anypoint.platform.client_secret>
 			        </properties>
                   </cloudHubDeployment>
                 </configuration>
