@@ -6,7 +6,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/mule/api-gateway/current/mule-api-gateway.xsd">
-	<configuration-properties doc:name="Configuration properties" doc:id="6f11e39f-1494-47a8-8f4b-fef0fd71edd2" file="config-$(env).yaml" />
+	<configuration-properties doc:name="Configuration properties" doc:id="6f11e39f-1494-47a8-8f4b-fef0fd71edd2" file="config.yaml" />
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="725463ba-f086-4f82-bb36-b0f119ab7635" >
 		<http:listener-connection host="0.0.0.0" port="${http.port}" />
 	</http:listener-config>
