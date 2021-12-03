@@ -31,19 +31,19 @@
 				<extensions>true</extensions> 
 				<configuration>
 				<cloudHubDeployment>
-                    <muleVersion>${muleVersion}</muleVersion>
-			        <username>${username}</username>
-			        <password>${password}</password>
-			        <applicationName>${applicationName}</applicationName>
-			        <environment>${environment}</environment>   
-			        <workers>${workers}</workers>
-			        <workerType>${workerType}</workerType>
-			        <objectStoreV2>${objectStoreV2}</objectStoreV2>
-			        <deploymentTimeout>${deploymentTimeout}</deploymentTimeout>
+                    <muleVersion>${deployment.muleVersion}</muleVersion>
+			        <username>${deployment.username}</username>
+			        <password>${deployment.password}</password>
+			        <applicationName>${deployment.applicationName}</applicationName>
+			        <environment>${deployment.environment}</environment>   
+			        <workers>${deployment.workers}</workers>
+			        <workerType>${deployment.workerType}</workerType>
+			        <objectStoreV2>${deployment.objectStoreV2}</objectStoreV2>
+			        <deploymentTimeout>${deployment.deploymentTimeout}</deploymentTimeout>
 			        <properties>
-			          <env>${env}</env>
-                      <anypoint.platform.client_id>${anypoint.platform.client_id}</anypoint.platform.client_id>
-                      <anypoint.platform.client_secret>${anypoint.platform.client_secret}</anypoint.platform.client_secret>
+			          <env>${deployment.env}</env>
+                      <anypoint.platform.client_id>${deployment.client_id}</anypoint.platform.client_id>
+                      <anypoint.platform.client_secret>${deployment.client_secret}</anypoint.platform.client_secret>
 			        </properties>
                   </cloudHubDeployment>
                 </configuration>

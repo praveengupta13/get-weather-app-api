@@ -20,5 +20,5 @@ deployment:
  objectStoreV2: "true"
  deploymentTimeout: "2100000"
  env: "dev"
- anypoint.platform.client_id: "5a0b3cf0273642bfa56ca16fa5a99f36"
- anypoint.platform.client_secret: "0EfE786945dc41399D36ea4BFCa7a256"
+ client_id: "5a0b3cf0273642bfa56ca16fa5a99f36"
+ client_secret: "0EfE786945dc41399D36ea4BFCa7a256"
