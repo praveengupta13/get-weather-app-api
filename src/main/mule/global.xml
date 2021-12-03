@@ -6,7 +6,6 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/mule/api-gateway/current/mule-api-gateway.xsd">
-	<configuration-properties doc:name="Configuration properties" doc:id="6f11e39f-1494-47a8-8f4b-fef0fd71edd2" file="config-$(env).yaml" />
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="725463ba-f086-4f82-bb36-b0f119ab7635" >
 		<http:listener-connection host="0.0.0.0" port="${http.port}" />
 	</http:listener-config>
@@ -14,7 +13,8 @@ http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/m
 	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="4dc2500e-5acf-4dff-8710-158dc9cc9c35" basePath="${request.basepath}">
 		<http:request-connection host="${request.host}" port="80"/>
 	</http:request-config>
-	<api-gateway:autodiscovery apiId="17477531" ignoreBasePath="false" doc:name="API Autodiscovery" doc:id="4591ea1a-5a69-4a8d-9fa1-4b497e349a34" flowRef="weather-mule-api-main" />
+	<api-gateway:autodiscovery apiId="17477794" ignoreBasePath="false" doc:name="API Autodiscovery" doc:id="4591ea1a-5a69-4a8d-9fa1-4b497e349a34" flowRef="weather-mule-api-main" />
+	<configuration-properties doc:name="Configuration properties" doc:id="f3f182d5-0bcf-48e1-b577-8c650e461624" file="config-${env}.yaml" />
 	
 	
 </mule>
