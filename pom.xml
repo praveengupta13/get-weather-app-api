@@ -31,18 +31,19 @@
 				<extensions>true</extensions> 
 				<configuration>
 				<cloudHubDeployment>
-                    <muleVersion>${deployment.muleVersion}</muleVersion>
-			        <username>${deployment.username}</username>
-			        <password>${deployment.password}</password>
-			        <applicationName>${deployment.applicationName}</applicationName>
-			        <environment>${deployment.environment}</environment>   
-			        <workers>${deployment.workers}</workers>
-			        <workerType>${deployment.workerType}</workerType>
-			        <objectStoreV2>${deployment.objectStoreV2}</objectStoreV2>
-			        <deploymentTimeout>${deployment.deploymentTimeout}</deploymentTimeout>
+                    <muleVersion>4.3.0</muleVersion>
+			        <username>naishagupta16072015</username>
+			        <password>Mulesoft@2021</password>
+			        <applicationName>weather-mule-app</applicationName>
+			        <environment>Sandbox</environment>   
+			        <workers>1</workers>
+			        <workerType>MICRO</workerType>
+			        <objectStoreV2>true</objectStoreV2>
+			        <deploymentTimeout>2100000</deploymentTimeout>
 			        <properties>
-                      <anypoint.platform.client_id>${deployment.client_id}</anypoint.platform.client_id>
-                      <anypoint.platform.client_secret>${deployment.client_secret}</anypoint.platform.client_secret>
+			          <env>dev</env>
+                      <anypoint.platform.client_id>5a0b3cf0273642bfa56ca16fa5a99f36</anypoint.platform.client_id>
+                      <anypoint.platform.client_secret>0EfE786945dc41399D36ea4BFCa7a256</anypoint.platform.client_secret>
 			        </properties>
                   </cloudHubDeployment>
                 </configuration>
