@@ -18,5 +18,5 @@ deployment:
  workers: "1"
  workerType: "MICRO"
  objectStoreV2: "true"
- client_id: "5a0b3cf0273642bfa56ca16fa5a99f36"
- client_secret: "0EfE786945dc41399D36ea4BFCa7a256"
+ client_id: "930df5a4657e4f07a4fe1967d0485158"
+ client_secret: "860f84d8A5fF4E058E46Be6A09C44f02"
