@@ -34,7 +34,7 @@
                     <muleVersion>4.3.0</muleVersion>
 			        <username>naishagupta16072015</username>
 			        <password>Mulesoft@2021</password>
-			        <applicationName>weather-mule-app3</applicationName>
+			        <applicationName>weather-mule-app4</applicationName>
 			        <environment>Sandbox</environment>   
 			        <workers>1</workers>
 			        <workerType>MICRO</workerType>
