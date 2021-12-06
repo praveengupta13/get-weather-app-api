@@ -28,24 +28,24 @@
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
-				<extensions>true</extensions> 
+				<extensions>true</extensions>
 				<configuration>
-				<cloudHubDeployment>
-                    <muleVersion>4.3.0</muleVersion>
-			        <username>naishagupta16072015</username>
-			        <password>Mulesoft@2021</password>
-			        <applicationName>weather-mule-app4</applicationName>
-			        <environment>Sandbox</environment>   
-			        <workers>1</workers>
-			        <workerType>MICRO</workerType>
-			        <objectStoreV2>true</objectStoreV2>
-			        <properties>
-			        <env>${env}</env>
-                      <anypoint.platform.client_id>${client_id}</anypoint.platform.client_id>
-                      <anypoint.platform.client_secret>${client_secret}</anypoint.platform.client_secret>
-			        </properties>
-                  </cloudHubDeployment>
-                </configuration>
+					<cloudHubDeployment>
+						<muleVersion>4.3.0</muleVersion>
+						<username>naishagupta16072015</username>
+						<password>Mulesoft@2021</password>
+						<applicationName>weather-mule-app5</applicationName>
+						<environment>Sandbox</environment>
+						<workers>1</workers>
+						<workerType>MICRO</workerType>
+						<objectStoreV2>true</objectStoreV2>
+						<properties>
+							<env>${env}</env>
+							<anypoint.platform.client_id>${client_id}</anypoint.platform.client_id>
+							<anypoint.platform.client_secret>${client_secret}</anypoint.platform.client_secret>
+						</properties>
+					</cloudHubDeployment>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
@@ -80,6 +80,12 @@
 			<groupId>org.mule.modules</groupId>
 			<artifactId>mule-validation-module</artifactId>
 			<version>1.4.5</version>
+			<classifier>mule-plugin</classifier>
+		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.modules</groupId>
+			<artifactId>mule-secure-configuration-property-module</artifactId>
+			<version>1.2.3</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
 	</dependencies>
