@@ -8,15 +8,3 @@ request:
  
 weatherapi:
  appid: "94a91ca29fe0e60a272f105e81f96777"
- 
-deployment:
- muleVersion : "4.3.0"
- username : "naishagupta16072015"
- password : "Mulesoft@2021"
- applicationName: "weather-mule-app2"
- environment: "Sandbox" 
- workers: "1"
- workerType: "MICRO"
- objectStoreV2: "true"
- client_id: "5a0b3cf0273642bfa56ca16fa5a99f36"
- client_secret: "0EfE786945dc41399D36ea4BFCa7a256"
