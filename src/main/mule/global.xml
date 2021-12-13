@@ -14,7 +14,7 @@ http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/m
 		<http:request-connection host="${request.host}" port="80"/>
 	</http:request-config>
 	<configuration-properties doc:name="Configuration properties" doc:id="684c34ab-9d79-456c-9cee-b2078171efc7" file="config-${env}.yaml" />
-	<api-gateway:autodiscovery apiId="17489927" ignoreBasePath="false" doc:name="API Autodiscovery" doc:id="8db0d376-2bf4-42e1-9f1f-7da73b8017ea" flowRef="weather-mule-api-main" />
+	<api-gateway:autodiscovery apiId="17496036" ignoreBasePath="false" doc:name="API Autodiscovery" doc:id="f695cc3f-a247-4cad-83a9-8528f956c9d3" flowRef="weather-mule-api-main" />
 	
 	
 </mule>
